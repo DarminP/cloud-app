@@ -3,7 +3,7 @@ import {db} from "./firebase"
 import { collection, getDocs, addDoc } from "firebase/firestore"
 
 
-function App() {
+function Applicants() {
 
   const [newName, setNewName] = useState("")
   const [newAge, setNewAge] = useState(0)
@@ -30,7 +30,6 @@ function App() {
   return (
       <div className="mainContainer">
       <h1>Crud in REACT</h1>
-      <h2>Refresh page to see updated list</h2>
       <input placeholder="Name..."
       onChange={(event) => {
         setNewName(event.target.value);
@@ -57,9 +56,9 @@ function App() {
           return (
             <div>
               {" "}
-              <h3>Name: {applicant.Name}</h3>
-              <h3>Age: {applicant.Age}</h3>
-              <h3>e-mail: {applicant.Email}</h3>
+              <h1>Name: {applicant.Name}</h1>
+              <h1>Age: {applicant.Age}</h1>
+              <h1>e-mail: {applicant.Email}</h1>
             </div>
           )
         })}
@@ -68,7 +67,7 @@ function App() {
       );
     }
     
-    export default App;
+    export default Applicants;
            
     
    
